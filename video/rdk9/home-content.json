@@ -16,6 +16,11 @@
   },
   "architecture": {
     "title": "Everything in the Core RDK platform",
+    "layers": [
+      ["Application Layer", "Firebolt apps, the Lightning reference UI and the Firebolt framework — where portable third-party and OTT streaming apps run."],
+      ["Middleware Layer", "A single, consistent implementation of core device functionality — the Thunder framework, entertainment services, media and DRM, and device management."],
+      ["Vendor Layer", "BSP, device drivers, HAL implementations, SoC adaptations and Linux OS integration — abstracting hardware differences behind the vendor layer."]
+    ],
     "cards": [
       ["Components Catalog", "The evolving set of Core RDK middleware components that provide shared platform functionality."],
       ["Northbound APIs", "Application-facing interfaces that give web and native apps consistent access to platform capabilities."],

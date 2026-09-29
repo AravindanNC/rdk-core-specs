@@ -27,17 +27,37 @@ def load(name: str) -> dict:
     return json.loads((ROOT / name).read_text(encoding="utf-8"))
 
 
+NORTHBOUND_MENU = [
+    ("northbound-apis.html", "Firebolt API Specification"),
+    ("firebolt-app-actions.html", "Firebolt App Actions Specification"),
+    ("firebolt-intents.html", "Firebolt Intents Spec"),
+    ("firebolt-key-codes.html", "Firebolt Key Codes Spec"),
+]
+
+NORTHBOUND_KEYS = {"northbound"}
+
+
 def nav(active: str) -> str:
     links = [
         ("index.html", "Home", "home"),
         ("component-registry.html", "Components Catalog", "components"),
-        ("northbound-apis.html", "Northbound API Spec", "northbound"),
         ("southbound-apis.html", "Southbound API Spec", "southbound"),
         ("hardware-specifications.html", "Hardware specifications", "hardware"),
     ]
     items = "".join(
         f'<a class="{"active" if key == active else ""}" href="{href}">{label}</a>'
-        for href, label, key in links
+        for href, label, key in links[:2]
+    )
+    menu_items = "".join(f'<a href="{href}">{label}</a>' for href, label in NORTHBOUND_MENU)
+    dropdown_active = "active" if active in NORTHBOUND_KEYS else ""
+    dropdown = (
+        f'<details class="nav-dropdown"><summary class="nav-dropdown-summary {dropdown_active}">Northbound API Spec</summary>'
+        f'<div class="nav-dropdown-menu">{menu_items}</div></details>'
+    )
+    items += dropdown
+    items += "".join(
+        f'<a class="{"active" if key == active else ""}" href="{href}">{label}</a>'
+        for href, label, key in links[2:]
     )
     return f'''<div class="accent"></div>
 <header class="nav"><a class="brand" href="index.html"><img src="RDK-logo.png" alt="RDK"></a><nav class="navlinks">{items}</nav></header>'''

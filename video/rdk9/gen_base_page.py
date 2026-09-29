@@ -1,5 +1,5 @@
 """RDKE RDK9 home-page generator."""
-from build import ROOT, cards, esc, hero, load, shell
+from build import ROOT, esc, hero, load, shell
 
 
 def platform_metric_cards(items: list[list[str]], links: list[str], metrics: list[int]) -> str:
@@ -21,9 +21,7 @@ def build_home() -> None:
     intro_html = '<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px;line-height:1"><div style="display:inline-flex;align-items:center;padding:5px 12px;border:1px solid #b8df63;border-radius:999px;color:#b8df63;font:700 .72rem/1 JetBrains Mono,monospace;letter-spacing:.14em">RDKE</div><div style="font-size:.95rem;font-weight:600;line-height:1;color:#b8df63">RDK9 for Video</div>' + subtitle_html + '</div>'
     body = body.replace(title_html, intro_html + title_html, 1)
 
-    why = content["why"]
-    body += f'<section class="section"><div class="eyebrow">RDKE overview</div><h2>Why choose RDK-E?</h2><p class="lede">{esc(why["description"])}</p>{cards(why["cards"])}</section>'
-    body += f'<section class="section alt"><div class="eyebrow">Architecture</div><h2>RDKE architecture</h2><div style="display:grid;gap:0;max-width:1000px">{"".join(f"<article class=\"card\" style=\"border-left-color:{color};border-radius:0\"><h3>{esc(layer[0])}</h3><p>{esc(layer[1])}</p></article>" for layer, color in zip(why["cards"][:3], ("#29b6e8", "#7ac943", "#f5a623")))}</div></section>'
+    architecture = content["architecture"]
     body += f'<section class="section alt"><div class="eyebrow">Upcoming Release</div><h2 style="font-family:Space Grotesk,Inter,sans-serif;letter-spacing:0">RDK9 release</h2><p class="lede">{esc(content["release_overview"])}</p></section>'
 
     links = ["component-registry.html", "northbound-apis.html", "southbound-apis.html"]
