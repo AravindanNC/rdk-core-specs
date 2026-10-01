@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{{ page.title | default: site.title }}</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="markdown.css">
+  <link rel="stylesheet" href="{{ '/rdk-core-specs/video/rdk8/styles.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/rdk-core-specs/video/rdk8/markdown.css' | relative_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -13,12 +13,12 @@
 <body>
   <div class="accent"></div>
   <header class="nav">
-    <a class="brand" href="{{ '/' | relative_url }}"><img src="RDK-logo.png" alt="RDK"></a>
+    <a class="brand" href="{{ '/' | relative_url }}"><img src="{{ '/rdk-core-specs/video/rdk8/RDK-logo.png' | relative_url }}" alt="RDK"></a>
     <nav class="navlinks">
-      <a class="active" href="{{ '/' | relative_url }}">Home</a>
-      <a href="component-catalog.html">Components Catalog</a>
-      <a href="northbound-api-spec.html">Northbound API Spec</a>
-      <a href="southbound-api-spec.html">Southbound API Spec</a>
+      <a href="{{ '/rdk-core-specs/video/rdk8/index.html' | relative_url }}">Home</a>
+      <a href="{{ '/rdk-core-specs/video/rdk8/component-catalog.html' | relative_url }}">Components Catalog</a>
+      <a href="{{ '/rdk-core-specs/video/rdk8/northbound-api-spec.html' | relative_url }}">Northbound API Spec</a>
+      <a href="{{ '/rdk-core-specs/video/rdk8/southbound-api-spec.html' | relative_url }}">Southbound API Spec</a>
     </nav>
   </header>
   <main>{{ content }}</main>
