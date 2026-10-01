@@ -12,7 +12,7 @@ title: RDKE Components Catalog | RDK8
 </section>
 
 <section class="section">
-  <div class="wrap catalog-content" markdown="1">
+  <div class="wrap catalog-content">
     <div class="release-panel">
       <span class="release-pill status-published"><span>Catalog status:</span> Published</span>
       <span class="release-pill version-pill"><span>Version:</span> RDK8-1.0.0</span>
@@ -36,9 +36,15 @@ title: RDKE Components Catalog | RDK8
       <div class="stat"><strong>3</strong><span>Layers</span></div>
     </div>
 
-## Component Data
+  </div>
+</section>
 
-The catalog below is generated from the RDK8 components workbook.
+<section class="section catalog-data">
+  <div class="wrap catalog-content">
+    <h2>Component Data</h2>
+    <p>The catalog below is generated from the RDK8 components workbook.</p>
+  </div>
+</section>
 
 | Component | Category | Layer | Version | Type | Source |
 | --- | --- | --- | --- | --- | --- |
@@ -123,6 +129,3 @@ The catalog below is generated from the RDK8 components workbook.
 | WPEFramework | VIDEO | middleware | 4.4.3 | core | [https://github.com/rdkcentral/Thunder](https://github.com/rdkcentral/Thunder) |
 | WPEFramework UI | Thunder | middleware | 1.0.0 | core | [https://github.com/rdkcentral/ThunderUI](https://github.com/rdkcentral/ThunderUI) |
 | wrp-c (msgpack conversion) | Core Utilities | middleware | 1.0.0 | core | [https://github.com/xmidt-org/wrp-c](https://github.com/xmidt-org/wrp-c) |
-
-  </div>
-</section>

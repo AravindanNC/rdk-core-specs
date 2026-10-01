@@ -17,6 +17,7 @@ code,.mono,.release-pill{font-family:"JetBrains Mono",ui-monospace,monospace!imp
 .catalog-content th,.catalog-content td{vertical-align:top;white-space:normal}
 .catalog-content td a{overflow-wrap:anywhere;word-break:break-word}
 .catalog-content .stats{width:100%}
+.catalog-data + table{width:min(1440px,90vw);margin:0 auto 58px}
 .release-pill{display:inline-flex;align-items:center;gap:6px;padding:9px 14px;border:1px solid var(--border);border-radius:5px;background:#fff;box-shadow:var(--shadow);font:700 .75rem/1 "JetBrains Mono",monospace;letter-spacing:.04em}
 .release-pill span{font-weight:600}
 .status-published{background:#e5f6eb;border-color:#9bd4aa;color:#1d6b43}
@@ -33,6 +34,7 @@ main table tbody td:nth-child(5){background:#e5f6eb;color:#1d6b43;font-weight:70
 main table tbody td:nth-child(2),main table tbody td:nth-child(5){border-radius:15px}
 @media(max-width:760px){
   .catalog-content{max-width:none}
+  .catalog-data + table{width:calc(100% - 40px)}
   .catalog-content .stats{grid-template-columns:repeat(3,minmax(0,1fr))}
   .catalog-content table{font-size:.82rem}
 }
