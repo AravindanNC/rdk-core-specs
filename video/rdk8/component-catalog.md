@@ -14,8 +14,8 @@ title: RDKE Components Catalog | RDK8
 <section class="section">
   <div class="wrap catalog-content" markdown="1">
     <div class="release-panel">
-    <span class="release-pill status-published"><span>Catalog status:</span> Published</span>
-    <span class="release-pill version-pill"><span>Version:</span> RDK8-1.0.0</span>
+      <span class="release-pill status-published"><span>Catalog status:</span> Published</span>
+      <span class="release-pill version-pill"><span>Version:</span> RDK8-1.0.0</span>
     </div>
 
     <details class="status-legend">
@@ -42,7 +42,7 @@ The catalog below is generated from the RDK8 components workbook.
 
 | Component | Category | Layer | Version | Type | Source |
 | --- | --- | --- | --- | --- | --- |
-| AppArmor RDKE Profiles | Security | middleware | 2.4.0 | core | [https://github.com/rdkcentral/rdk-apparmor-profiles](https://github.com/rdkcentral/rdk-apparmor-profiles) |
+| AppArmor RDK Profiles | Security | middleware | 2.4.0 | core | [https://github.com/rdkcentral/rdk-apparmor-profiles](https://github.com/rdkcentral/rdk-apparmor-profiles) |
 | AppGateway | Entertainment Services | middleware | 1.0.1.3 | core | [https://github.com/rdkcentral/entservices-appgateway](https://github.com/rdkcentral/entservices-appgateway) |
 | AvOutput | Entertainment Services | middleware | 1.1.0 | core | [https://github.com/rdkcentral/entservices-avoutput](https://github.com/rdkcentral/entservices-avoutput) |
 | Bluetooth Manager | Core Device Control Protocols | middleware | 1.0.9 | core | [https://github.com/rdkcentral/bluetooth_mgr](https://github.com/rdkcentral/bluetooth_mgr) |
@@ -125,5 +125,4 @@ The catalog below is generated from the RDK8 components workbook.
 | wrp-c (msgpack conversion) | Core Utilities | middleware | 1.0.0 | core | [https://github.com/xmidt-org/wrp-c](https://github.com/xmidt-org/wrp-c) |
 
   </div>
-</section>
 </section>

@@ -15,10 +15,10 @@
   <header class="nav">
     <a class="brand" href="{{ '/video/rdk8/' | relative_url }}"><img src="{{ '/video/rdk8/RDK-logo.png' | relative_url }}" alt="RDK"></a>
     <nav class="navlinks">
-      <a class="active" href="{{ '/video/rdk8/' | relative_url }}">Home</a>
-      <a href="{{ '/video/rdk8/component-catalog.html' | relative_url }}">Components Catalog</a>
-      <a href="{{ '/video/rdk8/northbound-api-spec.html' | relative_url }}">Northbound API Spec</a>
-      <a href="{{ '/video/rdk8/southbound-api-spec.html' | relative_url }}">Southbound API Spec</a>
+      <a class="{% if page.url == '/video/rdk8/' or page.url == '/video/rdk8/index.html' %}active{% endif %}" href="{{ '/video/rdk8/' | relative_url }}">Home</a>
+      <a class="{% if page.url == '/video/rdk8/component-catalog.html' %}active{% endif %}" href="{{ '/video/rdk8/component-catalog.html' | relative_url }}">Components Catalog</a>
+      <a class="{% if page.url == '/video/rdk8/northbound-api-spec.html' %}active{% endif %}" href="{{ '/video/rdk8/northbound-api-spec.html' | relative_url }}">Northbound API Spec</a>
+      <a class="{% if page.url == '/video/rdk8/southbound-api-spec.html' %}active{% endif %}" href="{{ '/video/rdk8/southbound-api-spec.html' | relative_url }}">Southbound API Spec</a>
     </nav>
   </header>
   <main>{{ content }}</main>
