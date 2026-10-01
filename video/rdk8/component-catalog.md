@@ -31,7 +31,7 @@ The catalog below is generated from the RDK8 components workbook.
 
 | Component | Category | Layer | Version | Type | Source |
 | --- | --- | --- | --- | --- | --- |
-| AppArmor RDK Profiles | Security | middleware | 2.4.0 | core | [https://github.com/rdkcentral/rdk-apparmor-profiles](https://github.com/rdkcentral/rdk-apparmor-profiles) |
+| AppArmor RDKE Profiles | Security | middleware | 2.4.0 | core | [https://github.com/rdkcentral/rdk-apparmor-profiles](https://github.com/rdkcentral/rdk-apparmor-profiles) |
 | AppGateway | Entertainment Services | middleware | 1.0.1.3 | core | [https://github.com/rdkcentral/entservices-appgateway](https://github.com/rdkcentral/entservices-appgateway) |
 | AvOutput | Entertainment Services | middleware | 1.1.0 | core | [https://github.com/rdkcentral/entservices-avoutput](https://github.com/rdkcentral/entservices-avoutput) |
 | Bluetooth Manager | Core Device Control Protocols | middleware | 1.0.9 | core | [https://github.com/rdkcentral/bluetooth_mgr](https://github.com/rdkcentral/bluetooth_mgr) |
