@@ -1,6 +1,6 @@
 ---
 layout: default
-title: RDKE. Core RDK Entertainment Platform - Draft
+title: RDKE. Core RDK Entertainment Platform
 ---
 
 <section class="hero home-hero">
