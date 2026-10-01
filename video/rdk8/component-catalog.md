@@ -12,22 +12,36 @@ title: RDKE Components Catalog | RDK8
 </section>
 
 <section class="section">
-  <div class="release-panel">
+  <div class="wrap catalog-content" markdown="1">
+    <div class="release-panel">
     <span class="release-pill status-published"><span>Catalog status:</span> Published</span>
     <span class="release-pill version-pill"><span>Version:</span> RDK8-1.0.0</span>
-  </div>
+    </div>
 
-  <div class="stats catalog-stats">
-    <div class="stat"><strong>81</strong><span>Components</span></div>
-    <div class="stat"><strong>17</strong><span>Categories</span></div>
-    <div class="stat"><strong>3</strong><span>Layers</span></div>
-  </div>
+    <details class="status-legend">
+      <summary>Status legend</summary>
+      <dl>
+        <dt>Draft</dt>
+        <dd>Specifications drafted and undergoing internal reviews and RTAB approval.</dd>
+        <dt>Approved</dt>
+        <dd>Review feedback has been addressed and RTAB has approved the specification.</dd>
+        <dt>Published</dt>
+        <dd>Tagged and versioned against an official RDK release.</dd>
+      </dl>
+    </details>
 
- </section>
+    <div class="stats catalog-stats">
+      <div class="stat"><strong>81</strong><span>Components</span></div>
+      <div class="stat"><strong>17</strong><span>Categories</span></div>
+      <div class="stat"><strong>3</strong><span>Layers</span></div>
+    </div>
 
 ## Component Data
 
 The catalog below is generated from the RDK8 components workbook.
+
+| Component | Category | Layer | Version | Type | Source |
+| --- | --- | --- | --- | --- | --- |
 
 | Component | Category | Layer | Version | Type | Source |
 | --- | --- | --- | --- | --- | --- |
@@ -112,3 +126,6 @@ The catalog below is generated from the RDK8 components workbook.
 | WPEFramework | VIDEO | middleware | 4.4.3 | core | [https://github.com/rdkcentral/Thunder](https://github.com/rdkcentral/Thunder) |
 | WPEFramework UI | Thunder | middleware | 1.0.0 | core | [https://github.com/rdkcentral/ThunderUI](https://github.com/rdkcentral/ThunderUI) |
 | wrp-c (msgpack conversion) | Core Utilities | middleware | 1.0.0 | core | [https://github.com/xmidt-org/wrp-c](https://github.com/xmidt-org/wrp-c) |
+
+  </div>
+</section>
