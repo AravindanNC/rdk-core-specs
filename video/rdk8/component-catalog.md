@@ -42,6 +42,9 @@ The catalog below is generated from the RDK8 components workbook.
 
 | Component | Category | Layer | Version | Type | Source |
 | --- | --- | --- | --- | --- | --- |
+
+| Component | Category | Layer | Version | Type | Source |
+| --- | --- | --- | --- | --- | --- |
 | AppArmor RDKE Profiles | Security | middleware | 2.4.0 | core | [https://github.com/rdkcentral/rdk-apparmor-profiles](https://github.com/rdkcentral/rdk-apparmor-profiles) |
 | AppGateway | Entertainment Services | middleware | 1.0.1.3 | core | [https://github.com/rdkcentral/entservices-appgateway](https://github.com/rdkcentral/entservices-appgateway) |
 | AvOutput | Entertainment Services | middleware | 1.1.0 | core | [https://github.com/rdkcentral/entservices-avoutput](https://github.com/rdkcentral/entservices-avoutput) |
@@ -126,4 +129,7 @@ The catalog below is generated from the RDK8 components workbook.
 
   </div>
 </section>
+<<<<<<< HEAD
 </section>
+=======
+>>>>>>> 1dd2a486facac9a60cc7ffaaab861c1f4a8119b2
