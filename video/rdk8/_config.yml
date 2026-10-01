@@ -1,0 +1,10 @@
+title: RDKE. Core RDK Entertainment Platform
+description: RDK8 for Video
+baseurl: ""
+url: ""
+markdown: kramdown
+theme: null
+exclude:
+  - mkdocs.yml
+  - build.py
+  - "*.xlsx"
