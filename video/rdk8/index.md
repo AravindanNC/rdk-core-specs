@@ -10,7 +10,7 @@ title: RDKE. Core RDK Entertainment Platform - Draft
       <span>RDK8 for Video</span>
       <span>Powering Next-Generation Entertainment Experiences</span>
     </div>
-    <h1>Core RDK Entertainment Platform</h1>
+    <h1>Core RDK Entertainment Platform -draft</h1>
     <p>RDKE is an open, modular foundation for entertainment platforms, built on reusable components, consistent APIs, and hardware abstraction. RDK8 advances app infrastructure through Firebolt Connect, supporting standardized, scalable delivery for web and native apps across RDK-powered devices.</p>
     <div class="badges">
       <span class="badge">Development Preview</span>
