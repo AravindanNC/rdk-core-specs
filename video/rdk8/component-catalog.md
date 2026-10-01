@@ -12,23 +12,22 @@ title: RDKE Components Catalog | RDK8
 </section>
 
 <section class="section">
-  <div class="wrap catalog-content" markdown="1">
+  <div class="wrap catalog-content">
     <div class="release-panel">
       <span class="release-pill status-published"><span>Catalog status:</span> Published</span>
       <span class="release-pill version-pill"><span>Version:</span> RDK8-1.0.0</span>
+      <details class="status-legend">
+        <summary>Status legend</summary>
+        <dl>
+          <dt>Draft</dt>
+          <dd>Specifications drafted and undergoing internal reviews and RTAB approval.</dd>
+          <dt>Approved</dt>
+          <dd>Review feedback has been addressed and RTAB has approved the specification.</dd>
+          <dt>Published</dt>
+          <dd>Tagged and versioned against an official RDK release.</dd>
+        </dl>
+      </details>
     </div>
-
-    <details class="status-legend">
-      <summary>Status legend</summary>
-      <dl>
-        <dt>Draft</dt>
-        <dd>Specifications drafted and undergoing internal reviews and RTAB approval.</dd>
-        <dt>Approved</dt>
-        <dd>Review feedback has been addressed and RTAB has approved the specification.</dd>
-        <dt>Published</dt>
-        <dd>Tagged and versioned against an official RDK release.</dd>
-      </dl>
-    </details>
 
     <div class="stats catalog-stats">
       <div class="stat"><strong>81</strong><span>Components</span></div>
@@ -36,9 +35,42 @@ title: RDKE Components Catalog | RDK8
       <div class="stat"><strong>3</strong><span>Layers</span></div>
     </div>
 
-## Component Data
+  </div>
+</section>
 
-The catalog below is generated from the RDK8 components workbook.
+<section class="section catalog-data">
+  <div class="wrap catalog-content">
+    <div class="catalog-toolbar" role="search">
+      <input id="component-search" type="search" placeholder="Search components" aria-label="Search components">
+      <select id="component-category" aria-label="Filter by category">
+        <option value="">All categories</option>
+        <option>Build System/OE extensions/Testing</option>
+        <option>Containerization &amp; Application Management</option>
+        <option>Core Device Control Protocols</option>
+        <option>Core Utilities</option>
+        <option>Device Management &amp; Diagnostics</option>
+        <option>Display/Graphics</option>
+        <option>Entertainment Services</option>
+        <option>Networking</option>
+        <option>RPC</option>
+        <option>Security</option>
+        <option>System</option>
+        <option>Thunder</option>
+        <option>Utilities</option>
+        <option>VIDEO</option>
+        <option>VIDEO Services</option>
+        <option>Video</option>
+        <option>WPEFramework</option>
+      </select>
+      <select id="component-layer" aria-label="Filter by layer">
+        <option value="">All layers</option>
+        <option>middleware</option>
+        <option>oss</option>
+        <option>vendor</option>
+      </select>
+    </div>
+  </div>
+</section>
 
 | Component | Category | Layer | Version | Type | Source |
 | --- | --- | --- | --- | --- | --- |
@@ -124,5 +156,38 @@ The catalog below is generated from the RDK8 components workbook.
 | WPEFramework UI | Thunder | middleware | 1.0.0 | core | [https://github.com/rdkcentral/ThunderUI](https://github.com/rdkcentral/ThunderUI) |
 | wrp-c (msgpack conversion) | Core Utilities | middleware | 1.0.0 | core | [https://github.com/xmidt-org/wrp-c](https://github.com/xmidt-org/wrp-c) |
 
-  </div>
-</section>
+<script>
+(() => {
+  const search = document.querySelector('#component-search');
+  const category = document.querySelector('#component-category');
+  const layer = document.querySelector('#component-layer');
+  const table = document.querySelector('.catalog-data + table');
+  if (!search || !category || !layer || !table) return;
+  const rows = Array.from(table.tBodies[0].rows);
+  rows.forEach(row => {
+    [
+      [row.cells[1], 'category-pill'],
+      [row.cells[4], 'core-pill']
+    ].forEach(([cell, className]) => {
+      if (!cell) return;
+      const value = cell.textContent.trim();
+      cell.textContent = '';
+      const pill = document.createElement('span');
+      pill.className = `catalog-pill ${className}`;
+      pill.textContent = value;
+      cell.appendChild(pill);
+    });
+  });
+  const render = () => {
+    const query = search.value.trim().toLowerCase();
+    rows.forEach(row => {
+      const text = row.textContent.toLowerCase();
+      const matchesSearch = !query || text.includes(query);
+      const matchesCategory = !category.value || row.cells[1].textContent.trim() === category.value;
+      const matchesLayer = !layer.value || row.cells[2].textContent.trim() === layer.value;
+      row.hidden = !(matchesSearch && matchesCategory && matchesLayer);
+    });
+  };
+  [search, category, layer].forEach(control => control.addEventListener('input', render));
+})();
+</script>
