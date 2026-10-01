@@ -1,7 +1,7 @@
 title: RDKE. Core RDK Entertainment Platform
 description: RDK8 for Video
-baseurl: ""
-url: ""
+baseurl: "/rdk-core-specs"
+url: "https://aravindannc.github.io"
 markdown: kramdown
 theme: null
 exclude:
